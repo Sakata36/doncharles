@@ -1,0 +1,35 @@
+using System;
+
+class RollDice
+{
+    private Random random = new Random();
+    private int result;
+
+    public void Roll()
+    {
+        result = random.Next(1, 7); // Generates a random number between 1 and 6 (inclusive)
+    }
+
+    public void Evaluate()
+    {
+        if (result > 3)
+        {
+            Console.WriteLine("Good");
+        }
+        else
+        {
+            Console.WriteLine("Bad");
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        RollDice dice = new RollDice();
+
+        dice.Roll();
+        dice.Evaluate();
+    }
+}
