@@ -4,9 +4,9 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("+--------------------------+);
+        Console.WriteLine("+---------------------------+");
         Console.WriteLine("| Voter Eligibility Checker |");
-        Console.WriteLine("+--------------------------+);
+        Console.WriteLine("+---------------------------+");
         Console.Write("Enter your age: ");
         if (int.TryParse(Console.ReadLine(), out int age))
         {
