@@ -4,24 +4,29 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("+---------------------------+");
-        Console.WriteLine("| Voter Eligibility Checker |");
-        Console.WriteLine("+---------------------------+");
-        Console.Write("Enter your age: ");
-        if (int.TryParse(Console.ReadLine(), out int age))
+        do
         {
-            if (age >= 18)
+            Console.WriteLine("+---------------------------+");
+            Console.WriteLine("| Voter Eligibility Checker |");
+            Console.WriteLine("+---------------------------+");
+            Console.Write("Enter your age: ");
+            if (int.TryParse(Console.ReadLine(), out int age))
             {
-                Console.WriteLine("You are eligible to vote.");
+                if (age >= 18)
+                {
+                    Console.WriteLine("You are eligible to vote.");
+                }
+                else
+                {
+                    Console.WriteLine("You are not eligible to vote yet.");
+                }
             }
             else
             {
-                Console.WriteLine("You are not eligible to vote yet.");
+                Console.WriteLine("Invalid input. Please enter a valid age.");
             }
-        }
-        else
-        {
-            Console.WriteLine("Invalid input. Please enter a valid age.");
-        }
+
+            Console.Write("\n\nPress 'y' to continue: ");
+        } while (Console.ReadLine().ToUpper() == "Y");
     }
 }
