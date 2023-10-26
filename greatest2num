@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Define two numbers
+        double number1 = 10.5;
+        double number2 = 15.7;
+
+        // Find the greater of the two numbers
+        double greaterNumber = Math.Max(number1, number2);
+
+        Console.WriteLine("The greater number is: " + greaterNumber);
+    }
+}
