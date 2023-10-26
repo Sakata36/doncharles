@@ -1,0 +1,14 @@
+Console.Clear();
+Random random = new Random();
+int randomNumber = random.Next(1, 7);
+
+if (randomNumber < 3)
+{
+    Console.WriteLine(randomNumber + " is bad dice");
+}
+else
+{
+    Console.WriteLine(randomNumber + " is Good dice");
+
+}
+Console.ReadLine();
