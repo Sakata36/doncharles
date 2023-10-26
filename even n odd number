@@ -1,0 +1,26 @@
+using System.Globalization;
+int num;
+List<int>ListOfNumbers = new List<int>();
+
+while(true)
+{
+    Console.WriteLine("Enter a number: ");
+    num = int.Parse(Console.ReadLine());
+    ListOfNumbers.Add(num);
+if(num == 0)
+{
+    break;
+}
+}
+foreach(var item in ListOfNumbers)
+{
+    if(item %2 == 0)
+    {
+        Console.Write($"{item} = Even");
+    }
+    else
+    {
+        Console.Write($"{item} = Odd");
+    }
+    Console.WriteLine();
+}
