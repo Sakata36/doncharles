@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        // Create a List for students
+        List<string> students = new List<string>();
+
+        // Add students to the List using a loop
+        while (true)
+        {
+            Console.Write("Enter a student's name (or leave the loop with no input): ");
+            string studentName = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(studentName))
+            {
+                break; // Exit the loop if there is no input
+            }
+
+            students.Add(studentName);
+        }
+
+        // Count the number of students in the List
+        int numberOfStudents = students.Count;
+
+        Console.WriteLine("Number of students: " + numberOfStudents);
+    }
+}
