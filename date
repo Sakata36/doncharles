@@ -1,0 +1,19 @@
+using System;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("\n\n Age in Days Calculator");
+        AgeInDays();
+        Console.ReadKey();
+    }
+
+    static void AgeInDays()
+    {
+        Console.Write("\nPlease enter your date of birth: ");
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine("mm/dd/yyyy or mm-dd-yyyy");
+        Console.ResetColor();
+    }
+}
