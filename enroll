@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<string> studentList = new List<string>();
+        int newStudentCount = 0;
+
+        while (true)
+        {
+            Console.Write("Did a new student enroll today? (yes/no): ");
+            string response = Console.ReadLine().ToLower();
+
+            if (response == "yes")
+            {
+                Console.Write("Enter the student's name: ");
+                string studentName = Console.ReadLine();
+                studentList.Add(studentName);
+                newStudentCount++;
+            }
+            else if (response == "no")
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter 'yes' or 'no'.");
+            }
+        }
+
+        Console.WriteLine($"Total new students enrolled: {newStudentCount}");
+        Console.WriteLine("New student names:");
+        foreach (var studentName in studentList)
+        {
+            Console.WriteLine(studentName);
+        }
+    }
+}
