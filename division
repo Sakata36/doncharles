@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = 10; // You can change this to set the range of the division table
+
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (j != 0)
+                {
+                    double result = (double)i / j;
+                    Console.Write($"{i} / {j} = {result:F2}\t");
+                }
+                else
+                {
+                    Console.Write($"{i} / {j} = Undefined\t");
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+}
